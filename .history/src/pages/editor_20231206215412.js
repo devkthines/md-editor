@@ -72,46 +72,18 @@ return ( <>
 
       <FloatButton icon={<CodeOutlined />} onClick={showModalTwo}/>
     </FloatButton.Group>
-    <Modal title="Markdown Editor/Previewer FAQs" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-    <>
-            <article>
-                <section>
-                    <header>
-                        <h1>What even is Markdown</h1>
-                    </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                         Non sequi ad enim deleniti accusamus facere itaque commodi autem odit repudiandae.
-                          Sunt doloremque, quaerat ut iste et quia laboriosam ab possimus rerum modi?
-                        Adipisci consequuntur quidem quas quod aperiam porro odio. Necessitatibus v
-                        elit exercitationem, dolore labore nesciunt perferendis quod minima et?</p>
-                     <p>for the full breakdown on all things markdown, follow this link: <span><a href="https://www.markdownguide.org/">markdownguide.org</a></span> </p>
-                </section>
-                <section>
-                    <header>
-                        <h1>What is Markdown Used for?</h1>
-                    </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                         Non sequi ad enim deleniti accusamus facere itaque commodi autem odit repudiandae.
-                          Sunt doloremque, quaerat ut iste et quia laboriosam ab possimus rerum modi?
-                        Adipisci consequuntur quidem quas quod aperiam porro odio. Necessitatibus v
-                        elit exercitationem, dolore labore nesciunt perferendis quod minima et?</p>
-                </section>
-                <section>
-                    <header>
-                        <h1>What does this App do?</h1>
-                    </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                         Non sequi ad enim deleniti accusamus facere itaque commodi autem odit repudiandae.
-                          Sunt doloremque, quaerat ut iste et quia laboriosam ab possimus rerum modi?
-                        Adipisci consequuntur quidem quas quod aperiam porro odio. Necessitatibus v
-                        elit exercitationem, dolore labore nesciunt perferendis quod minima et?</p>
-                </section>
-
-            </article>
-        </>
+    <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
     </Modal>
     <Modal title="Markdown Preview Examples" open={isModalTwoOpen} onOk={handleOkTwo} onCancel={handleCancelTwo}>
     <div>
+            <div id='example'>
+                <p>
+
+                </p>
+            </div>
             <div id='preview' >
                 <span dangerouslySetInnerHTML={{ __html: marked.parse(md.join('\r')) }}></span>
 
@@ -136,22 +108,25 @@ export default function Editor() {
     return (<>
     <div className='text-center'>
         <h1>React Markdown Editor</h1>
+
+    <h6>Practice MarkDown</h6>
         <div className='d-flex justify-content-evenly'>
             <App/>
             <Form>
                 <Row>
-                    <Form.Group as={Col} id='edBox' className="mb-3" controlId="formBasicPassword">
-                    <h5>Enter Markdown Here</h5>
+                    <Form.Group as={Col} className="mb-3" controlId="formBasicPassword">
+                    <h5>Enter Markdown Here!</h5>
                     <Form.Control value={edit} onChange={(e) => {
                         setPreview('');
                         SetEdit(e.target.value);
 
                     }} name="edit" id="editor" as='textarea' placeholder="Type Your Markdown here!" rows={3} />
+                    </Form.Group>
+                </Row>
+                <Row>
                     <Button as={Col} disabled={!edit} onClick={seePreview} variant="primary" type="submit">
                     Submit
                 </Button>
-                </Form.Group>
-
                 </Row>
             </Form>
             <Row>

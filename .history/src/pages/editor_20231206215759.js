@@ -136,12 +136,14 @@ export default function Editor() {
     return (<>
     <div className='text-center'>
         <h1>React Markdown Editor</h1>
+
+    <h6>Practice MarkDown</h6>
         <div className='d-flex justify-content-evenly'>
             <App/>
             <Form>
                 <Row>
-                    <Form.Group as={Col} id='edBox' className="mb-3" controlId="formBasicPassword">
-                    <h5>Enter Markdown Here</h5>
+                    <Form.Group as={Col} className="mb-3" controlId="formBasicPassword">
+                    <h5>Enter Markdown Here!</h5>
                     <Form.Control value={edit} onChange={(e) => {
                         setPreview('');
                         SetEdit(e.target.value);
@@ -151,6 +153,9 @@ export default function Editor() {
                     Submit
                 </Button>
                 </Form.Group>
+
+                </Row>
+                <Row>
 
                 </Row>
             </Form>

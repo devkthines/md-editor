@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-#editor, #mdEdView {
+#editor,#mdEdView {
     width: 270.71999999999997px;
     height: 554.88px;
     background-color: black;
@@ -13,4 +13,7 @@
     border: 1px solid black;
     border-radius: 1rem;
     color: white;
+}
+#edBox{
+    background-color: beige;
 }

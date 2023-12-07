@@ -140,7 +140,7 @@ export default function Editor() {
             <App/>
             <Form>
                 <Row>
-                    <Form.Group as={Col} id='edBox' className="mb-3" controlId="formBasicPassword">
+                    <Form.Group as={Col} className="mb-3" controlId="formBasicPassword">
                     <h5>Enter Markdown Here</h5>
                     <Form.Control value={edit} onChange={(e) => {
                         setPreview('');

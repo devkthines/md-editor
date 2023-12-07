@@ -8,11 +8,11 @@ import './styles/style.css'
 function App() {
   return (
     <BrowserRouter>
-    {/* <NavBar/> */}
+    <NavBar/>
       <Routes>
-    {/* <Route path='/edit' element={<Editor/>}/> */}
-    <Route index  element={<Editor/>}/>
-    {/* <Route path='/about' element={<About/>}/> */}
+    <Route path='/edit' element={<Editor/>}/>
+    <Route index  element={<Preview/>}/>
+    <Route path='/about' element={<About/>}/>
 
       </Routes>
     </BrowserRouter>

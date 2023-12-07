@@ -136,21 +136,25 @@ export default function Editor() {
     return (<>
     <div className='text-center'>
         <h1>React Markdown Editor</h1>
+
+    <h6>Practice MarkDown</h6>
         <div className='d-flex justify-content-evenly'>
             <App/>
             <Form>
                 <Row>
-                    <Form.Group as={Col} id='edBox' className="mb-3" controlId="formBasicPassword">
-                    <h5>Enter Markdown Here</h5>
+                    <Form.Group as={Col} className="mb-3" controlId="formBasicPassword">
+                    <h5>Enter Markdown Here!</h5>
                     <Form.Control value={edit} onChange={(e) => {
                         setPreview('');
                         SetEdit(e.target.value);
 
                     }} name="edit" id="editor" as='textarea' placeholder="Type Your Markdown here!" rows={3} />
-                    <Button as={Col} disabled={!edit} onClick={seePreview} variant="primary" type="submit">
+                    </Form.Group>
+                        <Button as={Col} disabled={!edit} onClick={seePreview} variant="primary" type="submit">
                     Submit
                 </Button>
-                </Form.Group>
+                </Row>
+                <Row>
 
                 </Row>
             </Form>
